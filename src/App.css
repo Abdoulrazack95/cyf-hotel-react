@@ -27,6 +27,11 @@
   font-size: large;
 }
 
+.logoMe{
+  width: 80px;
+  height: 80px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -50,4 +55,12 @@ tr {
 .footer {
   padding-top: 20px;
   text-align: center;
+}
+
+.imagesContainer{
+  display: flex;
+}
+.card-img-top{
+
+  width: 10%;
 }

@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <Heading />
-        <div className = 'imagesContainer'>
+        <div className = 'cardContainer'>
           <TouristInfoCards link ="https://peoplemakeglasgow.com" cityName = 'Glassgow'/>
           <TouristInfoCards link ="https://visitmanchester.com" cityName = 'Manchester'/>
           <TouristInfoCards link ="https://visitlondon.com" cityName = 'london'/>

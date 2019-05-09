@@ -4,9 +4,9 @@ import moment from "moment"
 const SearchResult = (props) => {
     const tableInfo = props.results;
     const tableMe =  tableInfo.map((item)  =>  
-    <tr>
+    <tr >
     <th scope="row">{item.id}</th>
-    <td>{item.title}{1+2} 1+2</td>
+    <td>{item.title}</td>
     <td>{item.firstName}</td>
     <td>{item.surname}</td>
     <td>{item.email}</td>

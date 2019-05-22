@@ -16,7 +16,7 @@ const SearchResult = (props) => {
     <td>{moment(item.checkOutDate).diff(item.checkInDate, 'days')}</td>
   </tr>)
     return(
-        <table className="table">
+      <table className="table">
   <thead>
     <tr>
       <th scope="col">Id</th>

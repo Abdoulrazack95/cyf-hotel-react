@@ -12,9 +12,9 @@ class App extends Component {
       <div className="App">
         <Heading />
         <div className = 'cardContainer'>
-          <TouristInfoCards link ="https://peoplemakeglasgow.com" cityName = 'Glassgow'/>
-          <TouristInfoCards link ="https://visitmanchester.com" cityName = 'Manchester'/>
-          <TouristInfoCards link ="https://visitlondon.com" cityName = 'london'/>
+          <TouristInfoCards source="https://dimg.visitscotland.com/wsimgs/visitscotland_26057864194_1356855539.jpg" link ="https://peoplemakeglasgow.com" paragraph="Willing to visite monumental buildings? in Glasgow you will find every types of fun " cityName = 'Glassgow'/>
+          <TouristInfoCards source="https://upload.wikimedia.org/wikipedia/commons/6/69/Piccadilly-Gardens-Manchester-UK-1.JPG" paragraph="Willing to visite monumental buildings? in Glasgow you will find every types of fun" cityName = 'Manchester'/>
+          <TouristInfoCards source="https://www.cbronline.com/wp-content/uploads/2017/02/UK.jpg" link ="https://visitlondon.com" paragraph="Willing to visite monumental buildings? in Glasgow you will find every types of fun " cityName = 'london'/>
         </div>
         <Bookings />
         <Restaurant />

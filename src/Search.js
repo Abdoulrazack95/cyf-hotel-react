@@ -12,9 +12,7 @@ class Search extends React.Component{
     this.props.search(this.input.value)
     
   }
-addMe = () => {
-  
-}
+
 
   render(){
     return(

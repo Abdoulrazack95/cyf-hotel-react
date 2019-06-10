@@ -27,7 +27,8 @@ class Order extends React.Component{
         
           return(
           <li>
-             {this.props.orderTypes}:{" "}{this.state.orders} <RestaurantButton handleClick={this.addOrder} name="Add Order now" />
+             {this.props.orderTypes}:{" "}{this.state.orders} 
+             <RestaurantButton handleClick={this.addOrder} name="Add Order now" />
             <RestaurantButton handleClick={this.subOrder} name="remove Order now" /> 
           </li>
           )

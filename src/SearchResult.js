@@ -3,8 +3,8 @@ import moment from "moment"
 
 const SearchResult = (props) => {
     const tableInfo = props.results;
-    const tableMe =  tableInfo.map((item)  =>  
-    <tr >
+    const tableMe =  tableInfo.map((item)  => 
+     <tr>
     <th scope="row">{item.id}</th>
     <td>{item.title}</td>
     <td>{item.firstName}</td>
@@ -15,6 +15,8 @@ const SearchResult = (props) => {
     <td>{item.checkOutDate}</td>
     <td>{moment(item.checkOutDate).diff(item.checkInDate, 'days')}</td>
   </tr>)
+   
+    
     return(
       <table className="table">
   <thead>

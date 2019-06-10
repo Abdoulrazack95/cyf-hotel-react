@@ -1,5 +1,4 @@
 import React from "react";
-
 import Order from './Order.js';
 
 class Restaurant extends React.Component{

@@ -6,6 +6,7 @@ class Search extends React.Component{
     this.input = input;
   }
   
+  
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.search(this.input.value)

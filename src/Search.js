@@ -36,33 +36,6 @@ class Search extends React.Component{
                 <Button />
               </div>
             </form>
-            <form onSubmit ={this.addMe}>
-  <div class="form-group">
-    
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="First Name"/>
-  </div>
-  <div class="form-group">
-    
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Sirname"/>
-  </div>
-  <div class="form-group">
-    
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Title"/>
-  </div>
-  <div class="form-group">
-    
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="roomID"/>
-  </div>
-  <div class="form-group">
-    
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="check in date"/>
-  </div>
-  <div class="form-group">
-    
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="check out date"/>
-  </div>
-        <button type="button" id= "submitMe" className = "btn btn-primary">Submit</button>
-</form>
           </div>
         </div>
       </div>

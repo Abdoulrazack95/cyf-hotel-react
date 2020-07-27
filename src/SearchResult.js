@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import moment from "moment";
 
 const SearchResult = (props) => {
+  const [selectedRows, setSelectedRows] = useState([]);
+
+  const handleClick = (index) => {
+    if (!selectedRows.includes(index)) {
+      setSelectedRows([...selectedRows, index]);
+    } else setSelectedRows(selectedRows.filter((e) => e !== index));
+    console.log(selectedRows);
+  };
   const tableInfo = props.results;
   const tableMe = tableInfo.map((item, index) => (
-    <tr key={index}>
+    <tr
+      key={index}
+      style={selectedRows.includes(index) ? { backgroundColor: "gray" } : null}
+      onClick={() => handleClick(index)}
+    >
       <th scope="row">{item.id}</th>
       <td>{item.title}</td>
       <td>{item.firstName}</td>

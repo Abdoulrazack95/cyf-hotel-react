@@ -3,8 +3,8 @@ import moment from "moment";
 
 const SearchResult = (props) => {
   const tableInfo = props.results;
-  const tableMe = tableInfo.map((item) => (
-    <tr>
+  const tableMe = tableInfo.map((item, index) => (
+    <tr key={index}>
       <th scope="row">{item.id}</th>
       <td>{item.title}</td>
       <td>{item.firstName}</td>

@@ -13,11 +13,22 @@ function Bookings() {
         setFakeBooking(data);
       });
   }, []);
+  console.log(fakeBookings);
+
+  let search = (searchVal) => {
+    let infoarray = fakeBookings.filter(
+      (x) =>
+        x.firstName.toLowerCase().includes(searchVal.toLowerCase()) ||
+        x.surname.toLowerCase().includes(searchVal.toLowerCase())
+    );
+
+    setFakeBooking(infoarray);
+  };
 
   return (
     <div className="App-content">
       <div className="container">
-        <Search />
+        <Search search={search} />
         <SearchResult results={fakeBookings} />
       </div>
     </div>

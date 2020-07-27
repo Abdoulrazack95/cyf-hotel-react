@@ -5,11 +5,14 @@ import FakeBookings from "./data/fakeBookings.json";
 
 function Bookings() {
   const [fakeBookings, setFakeBooking] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    setIsLoading(true);
     fetch("https://cyf-react.glitch.me/delayed")
       .then((res) => res.json())
       .then((data) => {
+        setIsLoading(false);
         setFakeBooking(data);
       });
   }, []);
@@ -24,12 +27,15 @@ function Bookings() {
 
     setFakeBooking(infoarray);
   };
-
   return (
     <div className="App-content">
       <div className="container">
         <Search search={search} />
-        <SearchResult results={fakeBookings} />
+        {!isLoading ? (
+          <SearchResult results={fakeBookings} />
+        ) : (
+          <p>Loading...</p>
+        )}
       </div>
     </div>
   );

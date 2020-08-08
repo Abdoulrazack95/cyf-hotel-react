@@ -34,7 +34,7 @@ function Bookings() {
         {!isLoading ? (
           <SearchResult results={fakeBookings} />
         ) : (
-          <p>Loading...</p>
+          <p>Loading... Please wait</p>
         )}
       </div>
     </div>

@@ -2,19 +2,24 @@ import React, { useState } from "react";
 import moment from "moment";
 
 const SearchResult = (props) => {
-  const [selectedRows, setSelectedRows] = useState([]);
+  const [selectItems, setSelectedItem] = useState([]);
 
   const handleClick = (index) => {
-    if (!selectedRows.includes(index)) {
-      setSelectedRows([...selectedRows, index]);
-    } else setSelectedRows(selectedRows.filter((e) => e !== index));
-    console.log(selectedRows);
+    if (!selectItems.includes(index)) {
+      setSelectedItem(selectItems.concat([index]));
+    } else {
+      setSelectedItem(
+        selectItems.filter((rowToRemove) => rowToRemove !== index)
+      );
+    }
+    console.log(selectItems);
   };
+
   const tableInfo = props.results;
   const tableMe = tableInfo.map((item, index) => (
     <tr
       key={index}
-      style={selectedRows.includes(index) ? { backgroundColor: "gray" } : null}
+      style={selectItems.includes(index) ? { backgroundColor: "gray" } : null}
       onClick={() => handleClick(index)}
     >
       <th scope="row">{item.id}</th>
@@ -50,3 +55,30 @@ const SearchResult = (props) => {
 };
 
 export default SearchResult;
+
+// // const [selectedRows, setSelectedRows] = useState([]);
+
+// // const handleClick = (index) => {
+// //   if (!selectedRows.includes(index)) {
+// //     setSelectedRows(selectedRows.concat([index]));
+// //   } else setSelectedRows(selectedRows.filter((e) => e !== index));
+// //   console.log(selectedRows);
+// // };
+// const tableInfo = props.results;
+// const tableMe = tableInfo.map((item, index) => (
+//   <tr
+//     key={index}
+//     // style={selectedRows.includes(index) ? { backgroundColor: "gray" } : null}
+//     // onClick={() => handleClick(index)}
+//   >
+//     <th scope="row">{item.id}</th>
+//     <td>{item.title}</td>
+//     <td>{item.firstName}</td>
+//     <td>{item.surname}</td>
+//     <td>{item.email}</td>
+//     <td>{item.roomId}</td>
+//     <td>{item.checkInDate}</td>
+//     <td>{item.checkOutDate}</td>
+//     <td>{moment(item.checkOutDate).diff(item.checkInDate, "days")}</td>
+//   </tr>
+// ));
